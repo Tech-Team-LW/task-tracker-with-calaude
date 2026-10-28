@@ -1,0 +1,7 @@
+__pycache__/
+*.egg-info/
+build/
+dist/
+tasks.json
+tasks.json.corrupt-*
+.*.tmp

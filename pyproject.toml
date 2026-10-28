@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "task-tracker"
+dynamic = ["version"]
+description = "A dependency-free command line task tracker with JSON persistence."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+task-tracker = "task_tracker.cli:main"
+
+[tool.setuptools]
+packages = ["task_tracker"]
+
+[tool.setuptools.dynamic]
+version = { attr = "task_tracker.__version__" }
