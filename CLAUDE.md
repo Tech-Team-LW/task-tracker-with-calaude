@@ -49,7 +49,7 @@ Dependencies only go downward: `cli → service → storage → models`.
 | File | Role | Key items |
 |------|------|-----------|
 | `main.py` | Root entrypoint | `raise SystemExit(main())` |
-| `task_tracker/__init__.py` | Version | `__version__ = "1.0.0"` (pyproject reads it dynamically) |
+| `task_tracker/__init__.py` | Version | `__version__ = "2.0.0"` (pyproject reads it dynamically) |
 | `task_tracker/__main__.py` | `python -m task_tracker` | |
 | `task_tracker/models.py` | Domain and validation | frozen `Task` dataclass, `TaskStatus(str, Enum)`, `ValidationError(ValueError)`, `validate_title` / `validate_description` / `validate_task_id`, `format_timestamp` / `parse_timestamp`, `Task.to_dict` / `from_dict` |
 | `task_tracker/storage.py` | Persistence | `JsonTaskStorage.load/save/recover`, `decode_state` (schema validation), `encode_state`, `atomic_write_text`, `resolve_storage_path`, `StorageError` → `CorruptStorageError`, `StoreState`, `RecoveryReport` |
